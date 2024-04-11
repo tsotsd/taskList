@@ -35,7 +35,7 @@ export const renderTasks = ({ tasks, fetchAndRenderTasks }) => {
     </div>
     <br />
     <button class="button" id="add-button">Добавить</button>
-    <a href="login.html" id="link-to-link">Перейти на страницу логина</a>
+    
 </div>
 `;
 

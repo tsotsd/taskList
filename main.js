@@ -1,7 +1,7 @@
 // Модуль main.js
 import { getTodos } from "./api.js";
 import { renderTasks } from "./renderTasks.js";
-import {renderLogin} from "./loginPage.js";
+import {renderLogin} from "./renderLogin.js";
 
 
 
@@ -17,5 +17,5 @@ const fetchAndRenderTasks = () => {
 
 // fetchAndRenderTasks();
 
-renderLogin();
+renderLogin({ fetchAndRenderTasks });
 

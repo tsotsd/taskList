@@ -1,7 +1,7 @@
-// Модуль loginPage.js
+// Модуль renderLogin.js
 import { login, setToken, token } from "./api.js";
 
-export const renderLogin = () => {
+export const renderLogin = ({ fetchAndRenderTasks }) => {
     const appElement = document.getElementById("app");
     const loginHtml = `
     <h1>Страница входа</h1>
@@ -18,7 +18,7 @@ export const renderLogin = () => {
   </div>
   <br />
   <button class="button" id="login-button">Войти</button>
-  <a href="index.html" id="link-to-tasks">Перейти на страницу задач</a>
+  
 </div>
 `;
     appElement.innerHTML = loginHtml;
@@ -35,6 +35,8 @@ export const renderLogin = () => {
             console.log(token);
             setToken(responseData.user.token);
             console.log(token);
-        });
+        }).then(() => {
+            fetchAndRenderTasks();
+        })
     });
 }
