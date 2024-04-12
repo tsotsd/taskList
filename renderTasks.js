@@ -5,7 +5,7 @@ const listElement = document.getElementById("list");
 
 export const renderTasks = ({ tasks, fetchAndRenderTasks }) => {
     const appElement = document.getElementById("app");
-
+    console.log(tasks)
     const tasksHtml = tasks
         .map((task) => {
             return `
